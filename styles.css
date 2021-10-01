@@ -1,107 +1,139 @@
 * {
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arvo', cursive;
-  text-align: center;
-  background: url('images/bg-1.jpg'), rgba(0, 0, 0, 0.2);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: color;
-  min-height: 100vh;
+    font-family: 'Arvo', cursive;
+    text-align: center;
+    background: url('images/bg-1.jpg'), rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 120%;
+    background-blend-mode: color;
+    background-position: 50% 50%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.shake {
+    animation-name: shakeIt;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shakeIt {
+    25% {
+        transform: translateX(-2px);
+    }
+    40% {
+        background-position: 55% 52%;
+    }
+    50% {
+        background-position: 50% 50%;
+        transform: translateX(0px);
+    }
+    60% {
+        background-position: 45% 48%;
+    }
+    75% {
+        transform: translateX(2px);
+    }
 }
 
 h1 {
-  font-size: 5rem;
-  color: #DBEDF3;
-  text-shadow: 3px 0 #DA0463;
+    font-size: 5rem;
+    color: #DBEDF3;
+    text-shadow: 3px 0 #DA0463;
 }
 
 .set {
-  margin: 10% auto;
+    margin: 10% auto;
 }
 
 .drum {
-  outline: none;
-  border: 5px solid #404B69;
-  border-radius: 50%;
-  font-size: 5rem;
-  line-height: 2;
-  font-weight: 900;
-  color: #DA0463;
-  text-shadow: 3px 0 #DBEDF3;
-  display: inline-block;
-  padding: 20px 0px;
-  min-width: 225px;
-  text-align: center;
-  margin: 10px;
-  background-color: white;
-  cursor: pointer;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-  transition: 0.2s ease-in-out;
+    outline: none;
+    border: 5px solid #404B69;
+    border-radius: 50%;
+    font-size: 5rem;
+    line-height: 2;
+    font-weight: 900;
+    color: #DA0463;
+    text-shadow: 3px 0 #DBEDF3;
+    display: inline-block;
+    padding: 20px 0px;
+    min-width: 225px;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: 0.1s ease-in-out;
 }
 
 .drum::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: -1;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
 }
 
 .drum:hover {
-  border-color: #DA0463;
+    border-color: #DA0463;
+}
+
+.pressed {
+    border-color: #DA0463;
 }
 
 .w {
-  background-image: url("images/tom1.png");
+    background-image: url("images/tom1.png");
 }
 
 .a {
-  background-image: url("images/tom2.png");
+    background-image: url("images/tom2.png");
 }
 
 .s {
-  background-image: url("images/tom3.png");
-  background-size: 55%;
+    background-image: url("images/tom3.png");
+    background-size: 55%;
 }
 
 .d {
-  background-image: url("images/tom4.png");
-  background-size: 55%;
+    background-image: url("images/tom4.png");
+    background-size: 55%;
 }
 
 .j {
-  background-image: url("images/snare.png");
-  background-size: 58%
+    background-image: url("images/snare.png");
+    background-size: 58%
 }
 
 .k {
-  background-image: url("images/crash.png");
-  background-size: 35%;
+    background-image: url("images/crash.png");
+    background-size: 35%;
 }
 
 .l {
-  background-image: url("images/kick.png");
-  background-size: 80%;
+    background-image: url("images/kick.png");
+    background-size: 80%;
 }
 
 footer {
-  color: #DBEDF3;
-  font-family: sans-serif;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+    color: #DBEDF3;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
