@@ -10,7 +10,14 @@ h1 {
   text-shadow: 3px 0 #DA0463;
 
 }
-
+title{
+  padding-top: 50px;
+}
+.mainsection{
+  position: relative;
+  height: 100vh;
+  /* padding: 80px; */
+}
 footer {
   color: #DBEDF3;
   font-family: sans-serif;
@@ -84,4 +91,38 @@ background-image: url("images/tom1.png");
   text-align: center;
   margin: 10px;
   background-color: white;
+}
+.back_image img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  -webkit-filter: blur(3px);
+}
+
+.image_text h1 {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  color: #da0463;
+  text-shadow: 3px 0 #dbedf3;
+}
+
+.image_button .flip {
+  font-size: 30px;
+  border: 3px solid #da0463;
+  font-family: "Arvo", cursive;
+  border-radius: 100px;
+  color: #dbedf3;
+  cursor: pointer;
+  position: absolute;
+  background: #da0463;
+  top: 60%;
+  left: 45%;
+}
+
+.image_button .flip:hover {
+  background: #da0463ff;
+  color: #dbedf3;
+  box-shadow: 0 0 50px #dbedf3, 0 0 21px #dbedf3;
 }
